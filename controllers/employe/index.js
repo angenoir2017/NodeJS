@@ -23,6 +23,7 @@ var getEmploye = function(req,res){
 
 var updateEmploye = function(req ,res){
   Employe.findById(req.params.id, function(err,employe){
+
     if(err){res.send(500,err);}
 
     if(req.body.code){employe.code = req.body.code;}

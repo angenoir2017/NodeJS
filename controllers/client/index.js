@@ -24,13 +24,13 @@ var getClient = function(req,res){
 var updateClient = function(req ,res){
   Client.findById(req.params.id, function(err,client){
     if(err){res.send(500,err);}
-
-    if(req.body.code){client.code = req.body.code;}
-      if(req.body.nom){client.nom = req.body.nom;}
+    
+        if(req.body.nom){client.nom = req.body.nom;}
         if(req.body.prenom){client.prenom = req.body.prenom;}
         if(req.body.username){client.username = req.body.username;}
         if(req.body.password){client.password = req.body.password;}
-        if(req.body.account){client.account = req.body.account;}
+        if(req.body.type){client.type = req.body.type;}
+        if(req.body.solde){client.solde = req.body.solde;}
       client.save(function(err,client){
             if(err){res.send(500,err);}
             res.json(200,client);
