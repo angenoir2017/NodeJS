@@ -5,9 +5,8 @@ var PostSchema = new Schema({
   title: String,
   body: String,
   author:String,
-  meta: {
-    likes: Number
-  }
+  postImage:String
+
 });
 
 module.exports = mongoose.model('Post', PostSchema);

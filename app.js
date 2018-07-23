@@ -24,7 +24,7 @@ app.use(cookieParser());
 
 // Nous definisons le chemin utilisee par 'express' pour aller
 //chercher les js, les css, les images
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'uploads')));
 
 //on defini ici la page d'acceuil
 app.use('/api', router);
